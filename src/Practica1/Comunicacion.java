@@ -15,7 +15,8 @@ import java.util.Scanner;
  *
  */
 public class Comunicacion {
-
+	String ruta = "/home/47767573t/git/EclipseWorkSpace/M09/UF01/ProgramaC/alea";
+	
 	/**
 	 * @param args
 	 * @throws IOException 
@@ -41,11 +42,9 @@ public class Comunicacion {
 				System.out.println("jugador:");
 				player = sc.next();				
 				
-				if (!player.equals("fi")){
-					
+				if (!player.equals("fi")){					
 				
-					Process alea = Runtime.getRuntime().exec(
-							"/home/47767573t/git/EclipseWorkSpace/M09/UF01/ProgramaC/alea");
+					Process alea = Runtime.getRuntime().exec(ruta);
 		
 					InputStream is = alea.getInputStream();
 					InputStreamReader isr = new InputStreamReader (is);
@@ -53,8 +52,8 @@ public class Comunicacion {
 					BufferedReader br = new BufferedReader (isr);
 				
 					String linia = br.readLine();
-					System.out.println(linia);
 					
+					System.out.println(linia.substring(9));				
 					
 				}else{
 					System.out.println("adios!");
