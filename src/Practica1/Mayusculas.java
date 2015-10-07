@@ -46,12 +46,15 @@ public class Mayusculas {
 			bw.write(wordMinus);
 			bw.flush();
 			
+			
 			InputStream is = mayus.getInputStream();
 			InputStreamReader isr = new InputStreamReader (is);
 			
 			BufferedReader br = new BufferedReader (isr);
-		
+			
 			String linia = br.readLine();
+			
+			
 			
 			System.out.println(linia);	
 			
