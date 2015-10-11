@@ -1,0 +1,20 @@
+
+
+
+public class Procesos extends Thread {
+	String mensaje;
+	
+	public void Proceso (String m){
+		
+	}
+	
+	public void run (){
+		
+		
+		
+		
+		
+	}
+	
+	
+}

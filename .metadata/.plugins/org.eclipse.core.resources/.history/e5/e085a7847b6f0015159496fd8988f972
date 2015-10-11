@@ -1,0 +1,19 @@
+import java.util.Random;
+
+
+public class Procesos implements Runnable {
+	String mensaje;
+	
+	public void Proceso (String m){
+		
+	}
+	
+	
+	@Override
+	public void run (){
+		Random rnd = new Random(10);	
+		
+	}
+	
+	
+}
