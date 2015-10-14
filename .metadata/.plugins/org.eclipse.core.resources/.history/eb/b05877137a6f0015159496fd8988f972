@@ -1,0 +1,21 @@
+
+public class Padre implements Runnable  {
+
+	Thread hilo1;
+	Thread hilo2;
+	Thread hilo3;
+	
+	
+	public static void main (String[] args){
+		
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+}

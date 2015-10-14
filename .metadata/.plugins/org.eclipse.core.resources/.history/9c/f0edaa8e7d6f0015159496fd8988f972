@@ -1,0 +1,26 @@
+import java.util.Random;
+
+
+public class Procesos extends Thread {
+	
+	private String nombre;
+	
+	public Procesos(String nombre) {
+		this.nombre = nombre;
+		
+	}
+
+	
+	@Override
+	public void run (){
+		
+		Random rnd = new Random();	
+		int num = rnd.nextInt(10);
+		
+		System.out.println(nombre+"--> "+num);
+	}
+	
+	
+	
+	
+}
