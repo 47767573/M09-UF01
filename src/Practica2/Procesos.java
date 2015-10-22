@@ -20,19 +20,19 @@ public class Procesos extends Thread {
 		Random rnd = new Random();	
 		int posFinal = posInicial +10;		
 		int alea;
-		
+		while
 		String respuesta = "";
 		
-		for (int i = posInicial ; posInicial < posFinal ; posInicial++) {				
+		for (int i = posInicial ; posInicial <= posFinal-1 ; posInicial++) {				
 			
-			alea = rnd.nextInt(9)+1; 
+			alea = rnd.nextInt(9); 
 			
-			respuesta += nombre+" en posicion "+i+" ,con valor "+alea+" ,en orden "+Padre.getTotalIntroducidos();			
-			
-			
+			respuesta += nombre+" en posicion "+i+" ,con valor "+alea+" ,en orden "+Padre.getTotalIntroducidos()+"º";			
+			Padre.addToArray(i,respuesta);
 			
 		}
 		
+		public boolean cajaLlena () {
 		
 	}
 	

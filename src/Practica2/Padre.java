@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Padre  {
 	
-	static ArrayList <String> al = new ArrayList<String>();
+	static ArrayList <String> al = new ArrayList <String> ();
 	
 	
 	public static void main (String[] args) throws InterruptedException{
@@ -17,13 +17,9 @@ public class Padre  {
 		
 		// Generador de hilos
 		for (int i = 0 ; i <= hilos.length ; i++){
-			hilos[i] = new Procesos ("hilo"+i,i*10);			
+			hilos[i] = new Procesos ("hilo"+(i+1),i*10);	
+			hilos[i].start();
 		}			
-		
-		//Activador de los hilos creados
-		for (int i = 0 ; i <= hilos.length ; i++){
-			hilos[i].start();			
-		}		
 	}
 
 	/**
@@ -31,7 +27,7 @@ public class Padre  {
 	 * @param n posicion donde introducir el String en el ArrayList
 	 * @param str Texto a introducir en la posición determinada
 	 */
-	public void add (int n, String str) {
+	public void addToArray (int n, String str) {
 		al.add(n, str);
 	}
 
@@ -42,10 +38,7 @@ public class Padre  {
 	 */
 	public static int getTotalIntroducidos() {
 		return al.size();
-	}
-	
-	
-	
+	}	
 	
 	
 }

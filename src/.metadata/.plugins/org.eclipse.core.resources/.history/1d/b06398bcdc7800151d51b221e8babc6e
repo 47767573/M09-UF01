@@ -1,0 +1,49 @@
+package practica2;
+
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Padre  {
+	
+	static ArrayList <String> al = new ArrayList <String> ();
+	
+	
+	/**
+	 * Pregunta por pantalla numero de hilos, general los hilos y los arranca
+	 * @param args
+	 * @throws InterruptedException
+	 */
+	public static void main (String[] args) throws InterruptedException{
+		Scanner scn  = new Scanner (System.in);		
+		
+		System.out.println("Cuantos hilos desea hacer?");
+		int hilosMax = scn.nextInt();
+		
+		Procesos[] hilos = new Procesos[hilosMax];				
+		
+		// Generador de hilos y los pone en marcha
+		for (int i = 0 ; i <= hilos.length-1 ; i++){
+			hilos[i] = new Procesos ("hilo"+(i+1),i*10);	
+			hilos[i].run();
+		}		
+	}
+
+	/**
+	 * Genera un string con la información introducido sobre el proceso del hilo y lo añade en el array
+	 * según posicion introducida. 
+	 * @param posicion, posicion del array donde se introducirá el string generado
+	 * @param hilo, nombre del hilo que llamado la función 
+	 * @param numeroAlea, numero aleatorio a introducir en el generador de string
+	 *//*
+	public static void addToArray (int posicion, String hilo, int numeroAlea) {
+		String respuesta = hilo+" en posicion "+posicion+", con valor "+numeroAlea+", en orden "+(al.size()+1)+"º";			
+		al.add(posicion, respuesta);
+		System.out.println(al.get(posicion));
+	}*/
+	
+	public static void add(int pos, String str){
+		al.add(pos, str);
+	}
+	
+}

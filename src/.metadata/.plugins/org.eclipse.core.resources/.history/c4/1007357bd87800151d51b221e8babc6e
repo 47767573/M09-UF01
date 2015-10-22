@@ -1,0 +1,48 @@
+package practica2;
+
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class Padre  {
+	
+	static ArrayList <String> al = new ArrayList <String> ();
+	
+	
+	public static void main (String[] args) throws InterruptedException{
+		Scanner scn  = new Scanner (System.in);		
+		
+		System.out.println("Cuantos hilos desea hacer?");
+		Procesos[] hilos = new Procesos[100];				
+		
+		// Generador de hilos
+		for (int i = 0 ; i <= hilos.length-1 ; i++){
+			hilos[i] = new Procesos ("hilo"+(i+1),i*10);	
+			hilos[i].run();
+		}			
+	}
+
+	/**
+	 * Anyade elementos String en la array en la posición enviada
+	 * @param n posicion donde introducir el String en el ArrayList
+	 * @param str Texto a introducir en la posición determinada
+	 */	
+	public static void addToArray (int posicion, String hilo, int numeroAlea) {
+		String respuesta = hilo+" en posicion "+i+", con valor "+alea+", en orden "+Padre.getTotalIntroducidos()+"º";			
+		
+	}	
+	
+	/**public static void addToArray (int n, String str) {
+		al.add(n, str);
+	}**/
+
+	
+	/**
+	 * conseguir numero de elementos introducidos en el arrayList
+	 * @return numero de elementos introducidos en el arrayList
+	 */
+	public static int getTotalIntroducidos() {
+		return al.size();
+	}		
+}

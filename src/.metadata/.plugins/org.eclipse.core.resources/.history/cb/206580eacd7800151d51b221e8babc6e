@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package practica2;
+
+/**
+ * @author Moises
+ *
+ */
+public class Padre {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
